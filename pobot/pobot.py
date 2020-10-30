@@ -1,8 +1,11 @@
 import random
+from nltk.tokenize import SyllableTokenizer
 
 
 def run(words):
-    parts = [decompose(x, stub=4) for x in words]
+    # parts = [decompose(x, stub=4) for x in words]
+    SSP = SyllableTokenizer()
+    parts = [SSP.tokenize(x) for x in words]
     portmanteau = stitch("", parts)
     return portmanteau
 
