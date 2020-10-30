@@ -7,7 +7,7 @@ def main():
         print("You need to provide at least two words!")
     else:
         words = sys.argv[1:]
-    print(pobot.run(words))
+        print(pobot.run(words))
 
 
 if __name__ == "__main__":
